@@ -45,20 +45,22 @@ function SignUp() {
   const handleSetAgremment = () => setAgremment(!agreement);
 
   function calculateWaterFootprint() {
-    let meteredValue = document.getElementById("metered").value;
-    let unmeteredValue = document.getElementById("unmetered").value;
-    let externalValue = document.getElementById("external").value;
-    let laundryValue = document.getElementById("laundry").value;
-    let toiletsValue = document.getElementById("toilets").value;
-    let greeneryValue = document.getElementById("greenery").value;
+    let meteredValue = parseInt(document.getElementById("metered").value);
+    let unmeteredValue = parseInt(document.getElementById("unmetered").value);
+    let externalValue = parseInt(document.getElementById("external").value);
+    let laundryValue = parseInt(document.getElementById("laundry").value);
+    let toiletsValue = parseInt(document.getElementById("toilets").value);
+    let greeneryValue = parseInt(document.getElementById("greenery").value);
+
+    localStorage.setItem("meteredValue", meteredValue);
+    localStorage.setItem("unmeteredValue", unmeteredValue);
+    localStorage.setItem("externalValue", externalValue);
+    localStorage.setItem("laundryValue", laundryValue);
+    localStorage.setItem("toiletsValue", toiletsValue);
+    localStorage.setItem("greeneryValue", greeneryValue);
 
     let total =
-      parseInt(meteredValue) +
-      parseInt(unmeteredValue) +
-      parseInt(externalValue) +
-      parseInt(laundryValue) +
-      parseInt(toiletsValue) +
-      parseInt(greeneryValue);
+      meteredValue + unmeteredValue + externalValue + laundryValue + toiletsValue + greeneryValue;
     console.log(total);
   }
 
@@ -68,7 +70,7 @@ function SignUp() {
       description="Calculate your water footprint and get a personalized water saving plan for your company."
       image={curved6}
     >
-      <Card sx={{ width: 800 }}>
+      <Card sx={{ width: 500 }} mr={300}>
         <SoftBox p={3} mb={1} textAlign="center">
           <SoftTypography variant="h5" fontWeight="medium">
             Enter information about your water usage
@@ -121,6 +123,8 @@ function SignUp() {
 
             <SoftBox mt={4} mb={1}>
               <SoftButton
+                component={Link}
+                to="/profile"
                 onClick={calculateWaterFootprint}
                 variant="gradient"
                 color="dark"
