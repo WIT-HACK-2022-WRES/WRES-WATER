@@ -20,7 +20,7 @@ const reportsBarChartData = {
   },
   items: [
     {
-      icon: { color: "primary", component: "low" },
+      icon: { color: "success", component: "low" },
       label: "lowest",
       progress: { content: "233.28 L" },
     },
