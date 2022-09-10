@@ -52,6 +52,8 @@ function SignUp() {
     let toiletsValue = parseInt(document.getElementById("toilets").value);
     let greeneryValue = parseInt(document.getElementById("greenery").value);
 
+    console.log(greeneryValue);
+
     localStorage.setItem("meteredValue", meteredValue);
     localStorage.setItem("unmeteredValue", unmeteredValue);
     localStorage.setItem("externalValue", externalValue);
@@ -59,9 +61,12 @@ function SignUp() {
     localStorage.setItem("toiletsValue", toiletsValue);
     localStorage.setItem("greeneryValue", greeneryValue);
 
+    console.log(greeneryValue);
+
     let total =
       meteredValue + unmeteredValue + externalValue + laundryValue + toiletsValue + greeneryValue;
     console.log(total);
+    localStorage.setItem("total", total);
   }
 
   return (

@@ -2,31 +2,31 @@ import React from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
 class PieRechartComponent extends React.Component {
-  COLORS = ["#8884d8", "#82ca9d", "#FFBB28", "#FF8042", "#AF19FF", "#3994D0"];
+  COLORS = ["#dd7e6b", "#f9cb9c", "#b6d7a8", "#9fc5e8", "#b4a7d6", "#d5a6bd"];
   pieData = [
     {
       name: "Metered",
-      value: localStorage.getItem("meteredValue")
+      value: parseInt(localStorage.getItem("meteredValue"))
     },
     {
       name: "UnMetered",
-      value: localStorage.getItem("unmeteredValue")
+      value: parseInt(localStorage.getItem("unmeteredValue"))
     },
     {
       name: "External",
-      value: localStorage.getItem("externalValue")
+      value: parseInt(localStorage.getItem("externalValue"))
     },
     {
       name: "Laundry",
-      value: localStorage.getItem("laundryValue")
+      value: parseInt(localStorage.getItem("laundryValue"))
     },
     {
       name: "Toilets",
-      value: localStorage.getItem("toiletsValue")
+      value: parseInt(localStorage.getItem("toiletsValue"))
     },
     {
       name: "Greenery",
-      value: localStorage.getItem("greeneryValue")
+      value: parseInt(localStorage.getItem("greeneryValue"))
     }
   ];
   CustomTooltip = ({ active, payload }) => {
@@ -40,7 +40,7 @@ class PieRechartComponent extends React.Component {
             border: "1px solid #cccc"
           }}
         >
-          <label>{`${payload[0].name} : ${payload[0].value}%`}</label>
+          <label>{`${payload[0].name} : ${payload[0].value} L`}</label>
         </div>
       );
     }
@@ -48,7 +48,7 @@ class PieRechartComponent extends React.Component {
   };
   render() {
     return (
-      <PieChart width={730} height={300}>
+      <PieChart width={500} height={300}>
         <Pie
           data={this.pieData}
           color="#000000"
