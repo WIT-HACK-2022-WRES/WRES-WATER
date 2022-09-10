@@ -36,77 +36,98 @@ import Separator from "layouts/authentication/components/Separator";
 // Images
 import curved6 from "assets/images/curved-images/curved14.jpg";
 
+// width
+import { sizing } from "@mui/system";
+
 function SignUp() {
   const [agreement, setAgremment] = useState(true);
 
   const handleSetAgremment = () => setAgremment(!agreement);
 
+  function calculateWaterFootprint() {
+    let meteredValue = document.getElementById("metered").value;
+    let unmeteredValue = document.getElementById("unmetered").value;
+    let externalValue = document.getElementById("external").value;
+    let laundryValue = document.getElementById("laundry").value;
+    let toiletsValue = document.getElementById("toilets").value;
+    let greeneryValue = document.getElementById("greenery").value;
+
+    let total =
+      parseInt(meteredValue) +
+      parseInt(unmeteredValue) +
+      parseInt(externalValue) +
+      parseInt(laundryValue) +
+      parseInt(toiletsValue) +
+      parseInt(greeneryValue);
+    console.log(total);
+  }
+
   return (
     <BasicLayout
       title="Welcome to WRES WATER!"
-      description="Use these awesome forms to login or create new account in your project for free."
+      description="Calculate your water footprint and get a personalized water saving plan for your company."
       image={curved6}
     >
-      <Card>
+      <Card sx={{ width: 800 }}>
         <SoftBox p={3} mb={1} textAlign="center">
           <SoftTypography variant="h5" fontWeight="medium">
-            Register with
+            Enter information about your water usage
           </SoftTypography>
         </SoftBox>
-        <SoftBox mb={2}>
-          <Socials />
-        </SoftBox>
-        <Separator />
         <SoftBox pt={2} pb={3} px={3}>
           <SoftBox component="form" role="form">
+            <SoftBox mb={2}></SoftBox>
             <SoftBox mb={2}>
-              <SoftInput placeholder="Name" />
-            </SoftBox>
-            <SoftBox mb={2}>
-              <SoftInput type="email" placeholder="Email" />
-            </SoftBox>
-            <SoftBox mb={2}>
-              <SoftInput type="password" placeholder="Password" />
-            </SoftBox>
-            <SoftBox display="flex" alignItems="center">
-              <Checkbox checked={agreement} onChange={handleSetAgremment} />
-              <SoftTypography
-                variant="button"
-                fontWeight="regular"
-                onClick={handleSetAgremment}
-                sx={{ cursor: "poiner", userSelect: "none" }}
-              >
-                &nbsp;&nbsp;I agree the&nbsp;
+              <SoftTypography variant="caption" fontWeight="light">
+                How much metered water was used from the municipal supply?
               </SoftTypography>
-              <SoftTypography
-                component="a"
-                href="#"
-                variant="button"
-                fontWeight="bold"
-                textGradient
-              >
-                Terms and Conditions
-              </SoftTypography>
+              <SoftInput id="metered" type="number" />
             </SoftBox>
+
+            <SoftBox mb={2}>
+              <SoftTypography variant="caption" fontWeight="light">
+                How much unmetered water was used from the municipal supply?
+              </SoftTypography>
+              <SoftInput id="unmetered" type="number" />
+            </SoftBox>
+
+            <SoftBox mb={2}>
+              <SoftTypography variant="caption" fontWeight="light">
+                How much water was delivered from an external source?
+              </SoftTypography>
+              <SoftInput id="external" type="number" />
+            </SoftBox>
+
+            <SoftBox mb={2}>
+              <SoftTypography variant="caption" fontWeight="light">
+                How much water is used in outsourced laundry?
+              </SoftTypography>
+              <SoftInput id="laundry" type="number" />
+            </SoftBox>
+
+            <SoftBox mb={2}>
+              <SoftTypography variant="caption" fontWeight="light">
+                How many toilets are on premise?
+              </SoftTypography>
+              <SoftInput id="toilets" type="email" />
+            </SoftBox>
+
+            <SoftBox mb={2}>
+              <SoftTypography variant="caption" fontWeight="light">
+                Estimate the surface area of greenery that needs to be watered
+              </SoftTypography>
+              <SoftInput id="greenery" type="number" />
+            </SoftBox>
+
             <SoftBox mt={4} mb={1}>
-              <SoftButton variant="gradient" color="dark" fullWidth>
-                sign up
+              <SoftButton
+                onClick={calculateWaterFootprint}
+                variant="gradient"
+                color="dark"
+                fullWidth
+              >
+                calculate
               </SoftButton>
-            </SoftBox>
-            <SoftBox mt={3} textAlign="center">
-              <SoftTypography variant="button" color="text" fontWeight="regular">
-                Already have an account?&nbsp;
-                <SoftTypography
-                  component={Link}
-                  to="/authentication/sign-in"
-                  variant="button"
-                  color="dark"
-                  fontWeight="bold"
-                  textGradient
-                >
-                  Sign in
-                </SoftTypography>
-              </SoftTypography>
             </SoftBox>
           </SoftBox>
         </SoftBox>
