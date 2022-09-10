@@ -43,7 +43,7 @@ function SignUp() {
 
   return (
     <BasicLayout
-      title="Welcome!"
+      title="Welcome to WRES WATER!"
       description="Use these awesome forms to login or create new account in your project for free."
       image={curved6}
     >
