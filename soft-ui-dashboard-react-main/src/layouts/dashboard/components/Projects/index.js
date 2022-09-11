@@ -103,7 +103,19 @@ function Projects() {
               done
             </Icon>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              &nbsp;<strong>20 done</strong> this month
+              &nbsp;<strong>3 done</strong> this month
+            </SoftTypography>
+            <Icon
+              sx={{
+                fontWeight: "bold",
+                color: ({ palette: { error } }) => error.main,
+                mt: -0.5,
+              }}
+            >
+              done
+            </Icon>
+            <SoftTypography variant="button" fontWeight="regular" color="text">
+              &nbsp;<strong>1 failed</strong> this month
             </SoftTypography>
           </SoftBox>
         </SoftBox>
@@ -150,9 +162,9 @@ function Projects() {
                 Suggested Goals
               </SoftTypography>
               <Box display='flex' flexDirection='column' gap="15px">
-                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                <Box display='flex' justifyContent='space-between' flexDirection='row' gap="30px">
                   <SoftTypography variant="h6" color="text" fontWeight="medium">
-                    Suggested Goal 1
+                    Recycle at least 30% of rainwater collected for pool facilities
                   </SoftTypography>
                   <Button variant="contained" color="info"
                     sx={{
@@ -163,9 +175,9 @@ function Projects() {
                     }}>Add
                   </Button>
                 </Box>
-                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                <Box display='flex' justifyContent='space-between' flexDirection='row' gap="30px">
                   <SoftTypography variant="h6" color="text" fontWeight="medium">
-                  Suggested Goal 2
+                    Use up to 300L of water for cooking and drinks in the main kitchen
                   </SoftTypography>
                   <Button variant="contained" color="info"
                     sx={{
@@ -176,9 +188,9 @@ function Projects() {
                     }}>Add
                   </Button>
                 </Box>
-                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                <Box display='flex' justifyContent='space-between' flexDirection='row' gap="30px">
                   <SoftTypography variant="h6" color="text" fontWeight="medium">
-                  Suggested Goal 3
+                    Recycle at least 100L of shower and bath water for toilet flush usage
                   </SoftTypography>
                   <Button variant="contained" color="info"
                     sx={{

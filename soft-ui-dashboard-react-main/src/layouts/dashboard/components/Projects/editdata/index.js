@@ -18,6 +18,7 @@ import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import tear from "assets/images/dot.png"
 
 import { Button } from "@mui/material";
 
@@ -26,20 +27,20 @@ export default function data() {
     editcolumns: [
       { name: "goals", align: "left" },
       { name: "consumption", align: "center" },
-      { name: "completion", align: "center" },
+      { name: "status", align: "center" },
       { name: "delete", align: "center"},
     ],
 
     editrows: [
       {
-        goals: [logoXD, "Soft UI XD Version"],
+        goals: [tear, "Use up to 1000L of water for washing"],
         consumption: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $14,000
+            600L
           </SoftTypography>
         ),
-        completion: (
-          <SoftBox width="12rem" textAlign="left">
+        status: (
+          <SoftBox width="15rem" textAlign="left">
             <SoftProgress value={60} color="info" variant="gradient" label={false} />
           </SoftBox>
         ),
@@ -54,15 +55,15 @@ export default function data() {
         ),
       },
       {
-        goals: [logoAtlassian, "Add Progress Track"],
+        goals: [tear, "Use up to 20,000L in room shower facilities"],
         consumption: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $3,000
+            2000L
           </SoftTypography>
         ),
-        completion: (
-          <SoftBox width="12rem" textAlign="left">
-            <SoftProgress value={10} color="info" variant="gradient" label={false} />
+        status: (
+          <SoftBox width="15rem" textAlign="left">
+            <SoftProgress value={10} color="success" variant="gradient" label={false} />
           </SoftBox>
         ),
         delete: (
@@ -76,15 +77,15 @@ export default function data() {
         ),
       },
       {
-        goals: [logoSlack, "Fix Platform Errors"],
+        goals: [tear, "Use up to 10,000L for flushing across hotel"],
         consumption: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            Not set
+            8000L
           </SoftTypography>
         ),
-        completion: (
-          <SoftBox width="12rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+        status: (
+          <SoftBox width="15rem" textAlign="left">
+            <SoftProgress value={80} color="warning" variant="gradient" label={false} />
           </SoftBox>
         ),
         delete: (
@@ -98,15 +99,15 @@ export default function data() {
         ),
       },
       {
-        goals: [logoSpotify, "Launch our Mobile App"],
+        goals: [tear, "Use maximum 300L for management tap water usage"],
         consumption: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $20,500
+            350L
           </SoftTypography>
         ),
-        completion: (
-          <SoftBox width="12rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+        status: (
+          <SoftBox width="15rem" textAlign="left">
+            <SoftProgress value={100} color="error" variant="gradient" label={false} />
           </SoftBox>
         ),
         delete: (

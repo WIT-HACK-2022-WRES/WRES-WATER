@@ -23,7 +23,7 @@ import SoftTypography from "components/SoftTypography";
 
 // Images
 import ivancik from "assets/images/ivancik.jpg";
-import tear from "./tear.png";
+import water from "./water.png";
 
 function WorkWithTheRockets() {
   return (
@@ -35,12 +35,12 @@ function WorkWithTheRockets() {
           </SoftTypography>
         </SoftBox>
         <SoftBox
-          height="70%"
+          height="80%"
           py={10}
           px={10}
           borderRadius="lg"
           sx={{
-            backgroundImage: `url(${tear})`,
+            backgroundImage: `url(${water})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
