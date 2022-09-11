@@ -30,9 +30,35 @@ import Table from "examples/Tables/Table";
 
 // Data
 import data from "layouts/dashboard/components/Projects/data";
+import editdata from "layouts/dashboard/components/Projects/editdata";
+import { Button } from "@mui/material";
+
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import TextField from '@mui/material/TextField';
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 'auto',
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 function Projects() {
+  // modal
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const { columns, rows } = data();
+  const { editcolumns, editrows } = editdata();
   const [menu, setMenu] = useState(null);
 
   const openMenu = ({ currentTarget }) => setMenu(currentTarget);
@@ -63,8 +89,8 @@ function Projects() {
     <Card>
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SoftBox>
-          <SoftTypography variant="h6" gutterBottom>
-            Projects
+          <SoftTypography variant="h5" color="black" fontWeight="bold">
+            Goals
           </SoftTypography>
           <SoftBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
@@ -77,14 +103,95 @@ function Projects() {
               done
             </Icon>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              &nbsp;<strong>30 done</strong> this month
+              &nbsp;<strong>20 done</strong> this month
             </SoftTypography>
           </SoftBox>
         </SoftBox>
         <SoftBox color="text" px={2}>
-          <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small" onClick={openMenu}>
-            more_vert
-          </Icon>
+          <Button onClick={handleOpen} >Edit</Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+          >
+            <Box sx={style}>
+              <SoftTypography variant="h5" color="black" fontWeight="bold">
+                Current Goals
+              </SoftTypography>
+              <SoftBox
+                sx={{
+                  "& .MuiTableRow-root:not(:last-child)": {
+                    "& td": {
+                      borderBottom: ({ borders: { borderWidth, borderColor } }) =>
+                        `${borderWidth[1]} solid ${borderColor}`,
+                    },
+                  },
+                }}
+              >
+                <Table columns={editcolumns} rows={editrows} />
+              </SoftBox>
+              <br></br>
+              <SoftTypography variant="h5" color="black" fontWeight="bold" marginBottom="5px">
+                Add Goals
+              </SoftTypography>
+              <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                <TextField id="standard-basic" variant="standard" placeholder="name of goal" />
+                <TextField id="standard-basic" variant="standard" placeholder="goal consumption" />
+                <Button variant="contained" color="info"
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: 'green',
+                      boxShadow: 'none',
+                      color: 'white !important'}, 
+                  }}>Add
+                </Button>
+              </Box>
+              <br></br>
+              <SoftTypography variant="h5" color="black" fontWeight="bold" marginBottom="10px">
+                Suggested Goals
+              </SoftTypography>
+              <Box display='flex' flexDirection='column' gap="15px">
+                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                  <SoftTypography variant="h6" color="text" fontWeight="medium">
+                    Suggested Goal 1
+                  </SoftTypography>
+                  <Button variant="contained" color="info"
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: 'green',
+                        boxShadow: 'none',
+                        color: 'white !important'}, 
+                    }}>Add
+                  </Button>
+                </Box>
+                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                  <SoftTypography variant="h6" color="text" fontWeight="medium">
+                  Suggested Goal 2
+                  </SoftTypography>
+                  <Button variant="contained" color="info"
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: 'green',
+                        boxShadow: 'none',
+                        color: 'white !important'}, 
+                    }}>Add
+                  </Button>
+                </Box>
+                <Box display='flex' justifyContent='flex-start' flexDirection='row' gap="30px">
+                  <SoftTypography variant="h6" color="text" fontWeight="medium">
+                  Suggested Goal 3
+                  </SoftTypography>
+                  <Button variant="contained" color="info"
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: 'green',
+                        boxShadow: 'none',
+                        color: 'white !important'}, 
+                    }}>Add
+                  </Button>
+                </Box>
+              </Box>
+            </Box>
+          </Modal>
         </SoftBox>
         {renderMenu}
       </SoftBox>

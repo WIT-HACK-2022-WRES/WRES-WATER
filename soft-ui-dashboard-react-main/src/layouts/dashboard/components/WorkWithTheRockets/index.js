@@ -23,43 +23,35 @@ import SoftTypography from "components/SoftTypography";
 
 // Images
 import ivancik from "assets/images/ivancik.jpg";
+import tear from "./tear.png";
 
 function WorkWithTheRockets() {
   return (
     <Card sx={{ height: "100%" }}>
-      <SoftBox position="relative" height="100%" p={2}>
+      <SoftBox display="flex" justifyContent="space-between" flexDirection="column" position="relative" height="100%" p={2}>
+        <SoftBox mb={3} pt={1}>
+          <SoftTypography variant="h5" color="black" fontWeight="bold">
+            My Water Footprint
+          </SoftTypography>
+        </SoftBox>
         <SoftBox
-          display="flex"
-          flexDirection="column"
-          height="100%"
-          py={2}
-          px={2}
+          height="70%"
+          py={10}
+          px={10}
           borderRadius="lg"
           sx={{
-            backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-              `${linearGradient(
-                rgba(gradients.dark.main, 0.8),
-                rgba(gradients.dark.state, 0.8)
-              )}, url(${ivancik})`,
-            backgroundSize: "cover",
+            backgroundImage: `url(${tear})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
-        >
-          <SoftBox mb={3} pt={1}>
-            <SoftTypography variant="h5" color="white" fontWeight="bold">
-              Work with the rockets
-            </SoftTypography>
-          </SoftBox>
-          <SoftBox mb={2}>
-            <SoftTypography variant="body2" color="white">
-              Wealth creation is an evolutionarily recent positive-sum game. It is all about who
-              take the opportunity first.
-            </SoftTypography>
-          </SoftBox>
+        ></SoftBox>
+        <SoftBox>
           <SoftTypography
             component="a"
             href="#"
             variant="button"
-            color="white"
+            color="black"
             fontWeight="medium"
             sx={{
               mt: "auto",
