@@ -35,43 +35,22 @@ function PlatformSettings() {
     <Card>
       <SoftBox pt={2} px={2}>
         <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-          platform settings
+          Personalised Suggestions
         </SoftTypography>
       </SoftBox>
       <SoftBox pt={1.5} pb={2} px={2} lineHeight={1.25}>
         <SoftTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
-          account
+          low-flow toilets 🚽
         </SoftTypography>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={followsMe} onChange={() => setFollowsMe(!followsMe)} />
-          </SoftBox>
+        <SoftBox mt={1}>
           <SoftBox width="80%" ml={2}>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone follows me
+              Low-flow toilets use no more than six litres of water per flush and reduce water usage
+              by as much as 30%
             </SoftTypography>
           </SoftBox>
         </SoftBox>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={answersPost} onChange={() => setAnswersPost(!answersPost)} />
-          </SoftBox>
-          <SoftBox width="80%" ml={2}>
-            <SoftTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone answers on my post
-            </SoftTypography>
-          </SoftBox>
-        </SoftBox>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={mentionsMe} onChange={() => setMentionsMe(!mentionsMe)} />
-          </SoftBox>
-          <SoftBox width="80%" ml={2}>
-            <SoftTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone mentions me
-            </SoftTypography>
-          </SoftBox>
-        </SoftBox>
+
         <SoftBox mt={3}>
           <SoftTypography
             variant="caption"
@@ -79,39 +58,57 @@ function PlatformSettings() {
             color="text"
             textTransform="uppercase"
           >
-            application
+            Aerated shower heads 🚿
           </SoftTypography>
         </SoftBox>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={newLaunches} onChange={() => setNewLaunches(!newLaunches)} />
-          </SoftBox>
+        <SoftBox mt={1}>
           <SoftBox width="80%" ml={2}>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              New launches and projects
+              Blends water with air, creating larger droplets and a more luxurious feeling … reduces
+              water by 50%.
             </SoftTypography>
           </SoftBox>
         </SoftBox>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={productUpdate} onChange={() => setProductUpdate(!productUpdate)} />
-          </SoftBox>
+
+        <SoftBox mt={3}>
+          <SoftTypography
+            variant="caption"
+            fontWeight="bold"
+            color="text"
+            textTransform="uppercase"
+          >
+            Native Plants 🌱
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox mt={1}>
           <SoftBox width="80%" ml={2}>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              Monthly product updates
+              Change landscape to low-water-consumption plants or native species that do not require
+              as much human intervention.
             </SoftTypography>
           </SoftBox>
         </SoftBox>
-        <SoftBox display="flex" py={1} mb={0.25}>
-          <SoftBox mt={0.25}>
-            <Switch checked={newsletter} onChange={() => setNewsletter(!newsletter)} />
-          </SoftBox>
+
+        <SoftBox mt={3}>
+          <SoftTypography
+            variant="caption"
+            fontWeight="bold"
+            color="text"
+            textTransform="uppercase"
+          >
+            graywater systems 💧
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox mt={1}>
           <SoftBox width="80%" ml={2}>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              Subscribe to newsletter
+              Implement graywater systems where wastewater from laundry, dishwashing, bathing, etc.
+              is treated and recycled to be used for irrigation and toilet flushing.
             </SoftTypography>
           </SoftBox>
         </SoftBox>
+
+        <SoftBox display="flex" py={1} mb={0.25}></SoftBox>
       </SoftBox>
     </Card>
   );

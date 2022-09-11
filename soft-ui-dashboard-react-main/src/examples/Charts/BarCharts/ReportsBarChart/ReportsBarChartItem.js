@@ -59,12 +59,12 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
         </SoftTypography>
       </SoftBox>
       <SoftBox mt={1}>
-        <SoftTypography variant="h4" fontWeight="bold" color={color}>
+        <SoftTypography variant="h6" fontWeight="bold" color={color}>
           {progress.content}
         </SoftTypography>
-        <SoftBox width="75%" mt={0.5}>
+        {/* <SoftBox width="75%" mt={0.5}>
           <SoftProgress value={progress.percentage} color={color} />
-        </SoftBox>
+        </SoftBox> */}
       </SoftBox>
     </SoftBox>
   );

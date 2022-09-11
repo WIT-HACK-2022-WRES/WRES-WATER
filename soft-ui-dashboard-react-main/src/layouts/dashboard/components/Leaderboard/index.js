@@ -15,26 +15,37 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Icon from "@mui/material/Icon";
-import Link from "@mui/material/Link";
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
 // Soft UI Dashboard React components
-import SoftButton from "components/SoftButton";
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 
-// Custom styles for the SidenavCard
-import { card, cardContent, cardIconBox, cardIcon } from "examples/Sidenav/styles/sidenavCard";
+// Images
+import ivancik from "assets/images/ivancik.jpg";
 
-// Soft UI Dashboard React context
-import { useSoftUIController } from "context";
-
-function SidenavCard() {
-  const [controller] = useSoftUIController();
-  const { miniSidenav, sidenavColor } = controller;
-
-  return <Card sx={(theme) => card(theme, { miniSidenav })}></Card>;
+function Leaderboard() {
+  return (
+    <Card sx={{ height: "100%" }}>
+      <SoftBox position="relative" height="100%" p={2}>
+        <SoftBox
+          display="flex"
+          flexDirection="column"
+          height="100%"
+          py={2}
+          px={2}
+          borderRadius="lg"
+        >
+          <SoftBox mb={3} pt={1}>
+            <SoftTypography variant="h5" color="black" fontWeight="bold">
+              Comparisons
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
+    </Card>
+  );
 }
 
-export default SidenavCard;
+export default Leaderboard;

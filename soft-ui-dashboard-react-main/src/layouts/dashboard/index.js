@@ -37,6 +37,8 @@ import BuildByDevelopers from "layouts/dashboard/components/BuildByDevelopers";
 import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import Strategies from "layouts/dashboard/components/Strategies";
+import Leaderboard from "layouts/dashboard/components/Leaderboard";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
@@ -101,36 +103,19 @@ function Dashboard() {
         </SoftBox>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={5}>
+            <Grid item xs={12} lg={8}>
+              <Strategies />
+            </Grid>
+            <Grid item xs={12} lg={4}>
               <ReportsBarChart
-                title="active users"
+                title="Hotel Water Usage Per Square Meter (L)"
                 description={
                   <>
-                    (<strong>+23%</strong>) than last week
+                    Cornell Hotel Sustainability Benchmarking Index
                   </>
                 }
                 chart={chart}
                 items={items}
-              />
-            </Grid>
-            <Grid item xs={12} lg={7}>
-              <GradientLineChart
-                title="Sales Overview"
-                description={
-                  <SoftBox display="flex" alignItems="center">
-                    <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
-                      <Icon className="font-bold">arrow_upward</Icon>
-                    </SoftBox>
-                    <SoftTypography variant="button" color="text" fontWeight="medium">
-                      4% more{" "}
-                      <SoftTypography variant="button" color="text" fontWeight="regular">
-                        in 2021
-                      </SoftTypography>
-                    </SoftTypography>
-                  </SoftBox>
-                }
-                height="20.25rem"
-                chart={gradientLineChartData}
               />
             </Grid>
           </Grid>
