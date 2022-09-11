@@ -19,15 +19,18 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
+import { Button } from "@mui/material";
+
 export default function data() {
   return {
-    columns: [
+    editcolumns: [
       { name: "goals", align: "left" },
       { name: "consumption", align: "center" },
       { name: "completion", align: "center" },
+      { name: "delete", align: "center"},
     ],
 
-    rows: [
+    editrows: [
       {
         goals: [logoXD, "Soft UI XD Version"],
         consumption: (
@@ -36,9 +39,18 @@ export default function data() {
           </SoftTypography>
         ),
         completion: (
-          <SoftBox width="15rem" textAlign="left">
+          <SoftBox width="12rem" textAlign="left">
             <SoftProgress value={60} color="info" variant="gradient" label={false} />
           </SoftBox>
+        ),
+        delete: (
+          <Button variant="contained" color="error"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                boxShadow: 'none',
+                color: 'white !important'}, 
+            }}>Delete</Button>
         ),
       },
       {
@@ -49,9 +61,18 @@ export default function data() {
           </SoftTypography>
         ),
         completion: (
-          <SoftBox width="15rem" textAlign="left">
+          <SoftBox width="12rem" textAlign="left">
             <SoftProgress value={10} color="info" variant="gradient" label={false} />
           </SoftBox>
+        ),
+        delete: (
+          <Button variant="contained" color="error"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                boxShadow: 'none',
+                color: 'white !important'}, 
+            }}>Delete</Button>
         ),
       },
       {
@@ -62,9 +83,18 @@ export default function data() {
           </SoftTypography>
         ),
         completion: (
-          <SoftBox width="15rem" textAlign="left">
+          <SoftBox width="12rem" textAlign="left">
             <SoftProgress value={100} color="success" variant="gradient" label={false} />
           </SoftBox>
+        ),
+        delete: (
+          <Button variant="contained" color="error"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                boxShadow: 'none',
+                color: 'white !important'}, 
+            }}>Delete</Button>
         ),
       },
       {
@@ -75,9 +105,18 @@ export default function data() {
           </SoftTypography>
         ),
         completion: (
-          <SoftBox width="15rem" textAlign="left">
+          <SoftBox width="12rem" textAlign="left">
             <SoftProgress value={100} color="success" variant="gradient" label={false} />
           </SoftBox>
+        ),
+        delete: (
+          <Button variant="contained" color="error"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                boxShadow: 'none',
+                color: 'white !important'}, 
+            }}>Delete</Button>
         ),
       },  
     ],

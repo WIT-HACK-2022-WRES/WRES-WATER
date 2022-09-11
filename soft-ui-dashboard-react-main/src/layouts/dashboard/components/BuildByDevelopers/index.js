@@ -33,13 +33,8 @@ function BuildByDevelopers() {
         <Grid container spacing={3}>
           <Grid item xs={12} lg={6}>
             <SoftBox display="flex" flexDirection="column" height="100%">
-              <SoftBox pt={1} mb={0.5}>
-                <SoftTypography variant="body2" color="text" fontWeight="medium">
-                  Build by developers
-                </SoftTypography>
-              </SoftBox>
               <SoftTypography variant="h5" fontWeight="bold" gutterBottom>
-                Soft UI Dashboard
+                Goals
               </SoftTypography>
               <SoftBox mb={6}>
                 <SoftTypography variant="body2" color="text">
