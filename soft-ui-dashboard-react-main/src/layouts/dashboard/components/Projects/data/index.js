@@ -29,7 +29,7 @@ export default function data() {
 
     rows: [
       {
-        goals: [logoXD, "Soft UI XD Version"],
+        goals: [logoXD, ""],
         consumption: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
             $14,000
@@ -50,7 +50,7 @@ export default function data() {
         ),
         completion: (
           <SoftBox width="15rem" textAlign="left">
-            <SoftProgress value={10} color="info" variant="gradient" label={false} />
+            <SoftProgress value={10} color="success" variant="gradient" label={false} />
           </SoftBox>
         ),
       },
@@ -63,7 +63,7 @@ export default function data() {
         ),
         completion: (
           <SoftBox width="15rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+            <SoftProgress value={80} color="warning" variant="gradient" label={false} />
           </SoftBox>
         ),
       },
@@ -76,7 +76,7 @@ export default function data() {
         ),
         completion: (
           <SoftBox width="15rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+            <SoftProgress value={100} color="error" variant="gradient" label={false} />
           </SoftBox>
         ),
       },  

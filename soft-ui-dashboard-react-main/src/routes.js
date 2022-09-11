@@ -65,15 +65,6 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Leaderboard",
-    key: "tables",
-    route: "/tables",
-    icon: <Office size="12px" />,
-    component: <Tables />,
-    noCollapse: true,
-  },
-  {
-    type: "collapse",
     name: "Billing",
     key: "billing",
     route: "/billing",
@@ -93,7 +84,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign In",
+    name: "Sign Out",
     key: "sign-in",
     route: "/authentication/sign-in",
     icon: <Document size="12px" />,
@@ -102,7 +93,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign Up",
+    name: "Calculate Footprint",
     key: "sign-up",
     route: "/authentication/sign-up",
     icon: <SpaceShip size="12px" />,
