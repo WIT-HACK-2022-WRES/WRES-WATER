@@ -32,38 +32,7 @@ function Footer() {
     <SoftBox component="footer" py={6}>
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
-          <SoftBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
-            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                Company
-              </SoftTypography>
-            </SoftBox>
-            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                About Us
-              </SoftTypography>
-            </SoftBox>
-            <SoftBox mr={{ xs: 0, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                Team
-              </SoftTypography>
-            </SoftBox>
-            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                Product
-              </SoftTypography>
-            </SoftBox>
-            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                Blog
-              </SoftTypography>
-            </SoftBox>
-            <SoftBox>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
-                Pricing
-              </SoftTypography>
-            </SoftBox>
-          </SoftBox>
+          
         </Grid>
         <Grid item xs={12} lg={8}>
           <SoftBox display="flex" justifyContent="center" mt={1} mb={3}>

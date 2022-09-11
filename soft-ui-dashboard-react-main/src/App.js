@@ -46,7 +46,7 @@ import routes from "routes";
 import { useSoftUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
-import brand from "assets/images/logo-ct.png";
+import brand from "assets/images/tear.png";
 
 export default function App() {
   const [controller, dispatch] = useSoftUIController();
@@ -146,8 +146,8 @@ export default function App() {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
             />
-            <Configurator />
-            {configsButton}
+            {/* <Configurator /> */}
+            {/* {configsButton} */}
           </>
         )}
         {layout === "vr" && <Configurator />}
@@ -170,8 +170,8 @@ export default function App() {
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
-          <Configurator />
-          {configsButton}
+          {/* <Configurator />
+          {configsButton} */}
         </>
       )}
       {layout === "vr" && <Configurator />}
