@@ -78,7 +78,7 @@ function SignUp() {
       <Card sx={{ width: 500 }} mr={300}>
         <SoftBox p={3} mb={1} textAlign="center">
           <SoftTypography variant="h5" fontWeight="medium">
-            Enter information about your water usage
+            Enter information about your water usage (L)
           </SoftTypography>
         </SoftBox>
         <SoftBox pt={2} pb={3} px={3}>
